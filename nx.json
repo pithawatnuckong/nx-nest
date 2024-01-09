@@ -40,8 +40,7 @@
       "!{projectRoot}/test-setup.[jt]s",
       "!{projectRoot}/.eslintrc.json",
       "!{projectRoot}/eslint.config.js"
-    ],
-    "sharedGlobals": []
+    ]
   },
   "nxCloudAccessToken": "ZDNkMjgyN2UtOTYyOC00ZDFmLTgxMDUtYTc5Zjk5N2FkNTUxfHJlYWQtd3JpdGU="
 }

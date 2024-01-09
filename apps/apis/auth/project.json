@@ -1,7 +1,7 @@
 {
-  "name": "product",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/product/src",
+  "name": "apis-auth",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/apis/auth/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -11,11 +11,11 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/apps/product",
-        "main": "apps/product/src/main.ts",
-        "tsConfig": "apps/product/tsconfig.app.json",
-        "assets": ["apps/product/src/assets"],
-        "webpackConfig": "apps/product/webpack.config.js"
+        "outputPath": "dist/apps/apis/auth",
+        "main": "apps/apis/auth/src/main.ts",
+        "tsConfig": "apps/apis/auth/tsconfig.app.json",
+        "assets": ["apps/apis/auth/src/assets"],
+        "webpackConfig": "apps/apis/auth/webpack.config.js"
       },
       "configurations": {
         "development": {},
@@ -26,14 +26,14 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "product:build"
+        "buildTarget": "apis-auth:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "product:build:development"
+          "buildTarget": "apis-auth:build:development"
         },
         "production": {
-          "buildTarget": "product:build:production"
+          "buildTarget": "apis-auth:build:production"
         }
       }
     },
@@ -45,7 +45,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/product/jest.config.ts"
+        "jestConfig": "apps/apis/auth/jest.config.ts"
       }
     }
   },
