@@ -65,3 +65,7 @@ Nx comes with local caching already built-in (check your `nx.json`). On CI you m
 ## References
 - [Repository](https://betterprogramming.pub/implementing-a-generic-repository-pattern-using-nestjs-fb4db1b61cce)
 - [Architecture - (royib's clean)](https://github.com/royib/clean-architecture-nestJS)
+- [Exception Handler](https://www.freecodecamp.org/news/exception-filters-in-nestjs/)
+- [Authentication - (passport)](https://docs.nestjs.com/recipes/passport)
+- [TypeORM](https://dev.to/vishnucprasad/establishing-postgresql-connection-with-typeorm-in-nestjs-4le3)
+- [Query Builder](https://blog.logrocket.com/using-typeorms-querybuilder-nestjs/)
