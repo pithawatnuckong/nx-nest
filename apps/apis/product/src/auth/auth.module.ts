@@ -8,13 +8,14 @@ import {PassportModule} from "@nestjs/passport";
 import {JwtModule} from "@nestjs/jwt";
 import {LocalStrategy} from "./strategies/local.strategy";
 import {JwtStrategy} from "./strategies/jwt.strategy";
+import {configurationService} from "../configuration/configuration.service";
 
 @Module({
   imports: [
     TypeOrmModule.forFeature([User]),
     PassportModule.register({defaultStrategy: "jwt"}),
     JwtModule.register({
-      secret: "secretKey",
+      secret: configurationService.getJwtSecretKey(),
       signOptions: {
         algorithm: "HS256",
         expiresIn: "1h"

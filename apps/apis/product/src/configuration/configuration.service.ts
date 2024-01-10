@@ -14,7 +14,7 @@ class ConfigurationService {
     return value
   }
 
-  public getTypeOrmConfiguration(): TypeOrmModuleOptions {
+  getTypeOrmConfiguration(): TypeOrmModuleOptions {
     return {
       type: "postgres",
       // entities: [__dirname + "**/*.entity{.ts,.js}"],
@@ -30,6 +30,10 @@ class ConfigurationService {
       synchronize: true,
 
     };
+  }
+
+  getJwtSecretKey(): string {
+    return this.getValue("JWT_SECRET", false) || "jwtSecret"
   }
 }
 
