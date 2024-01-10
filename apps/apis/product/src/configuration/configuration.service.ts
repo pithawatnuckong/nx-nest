@@ -1,6 +1,4 @@
 import {TypeOrmModuleOptions} from "@nestjs/typeorm";
-import {Injectable} from "@nestjs/common";
-import {EntityClassOrSchema} from "@nestjs/typeorm/dist/interfaces/entity-class-or-schema.type";
 import {Product} from "../product/product.entity";
 import {User} from "../user/user.entity";
 
