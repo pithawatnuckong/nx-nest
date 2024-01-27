@@ -1,17 +1,19 @@
 import {Body, Controller, Get, Param, Post} from '@nestjs/common';
 import {CreateOrUpdateModel, ProductResponse, ProductService} from "./product.service";
+import {ProductServiceImpl} from "../../../../../libs/apis/product/services/impl/product.service";
+import {FindProductRequest, FindProductResponse} from "../../../../../libs/apis/product/models";
 
 @Controller('/products')
 export class ProductController {
   constructor(
-    private readonly productService: ProductService
+    private readonly productService: ProductServiceImpl
   ) {
   }
 
   // Find all products
   @Get()
-  async getProducts(): Promise<ProductResponse[] | null> {
-    return await this.productService.findAllProducts();
+  async getProducts(@Body() request: FindProductRequest): Promise<FindProductResponse | null> {
+    return this.productService.FindProduct(request);
   }
 
   // Find product by ID xx

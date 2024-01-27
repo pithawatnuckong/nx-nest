@@ -4,6 +4,7 @@ import {SignUpRequest} from "../auth/auth.service";
 import {InjectRepository} from "@nestjs/typeorm";
 import {User} from "./user.entity";
 import {Repository} from "typeorm";
+import { UserRepository } from "./user.repository";
 
 export type UserResponse = {
   id: string,
@@ -18,7 +19,7 @@ export class UserService {
 
   constructor(
     @InjectRepository(User)
-    private readonly userRepository: Repository<User>
+    private readonly userRepository: UserRepository
   ) {
   }
 

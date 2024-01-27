@@ -8,8 +8,8 @@ import {UserModule} from './user/user.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({isGlobal: true, envFilePath: "../../../../.env"}),
     TypeOrmModule.forRoot(configurationService.getTypeOrmConfiguration()),
+    ConfigModule.forRoot({isGlobal: true, envFilePath: `${__dirname}../../.env`}),
     ProductModule,
     AuthModule,
     UserModule

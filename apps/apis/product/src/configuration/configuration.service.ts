@@ -33,7 +33,11 @@ class ConfigurationService {
   }
 
   getJwtSecretKey(): string {
-    return this.getValue("JWT_SECRET", false) || "jwtSecret"
+    return this.getValue("JWT_SECRET", false) || "jwtSecret";
+  }
+
+  getApplicationPort(): number {
+    return parseInt(this.getValue("APPLICATION_PORT", false)) || 0
   }
 }
 
